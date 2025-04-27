@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบบันทึกรายรับ-รายจ่าย</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ระบบบันทึกรายรับ-รายจ่าย</h1>
+    </header>
+
+    <main>
+        <section class="input-form">
+            <h2>บันทึกรายการ</h2>
+            <form id="expense-form">
+                <label for="category">หมวดหมู่</label>
+                <input type="text" id="category" name="category" required>
+
+                <label for="amount">จำนวนเงิน</label>
+                <input type="number" id="amount" name="amount" required>
+
+                <label for="date">วันที่</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="type">ประเภท</label>
+                <select id="type" name="type">
+                    <option value="income">รายรับ</option>
+                    <option value="expense">รายจ่าย</option>
+                </select>
+
+                <button type="submit">บันทึก</button>
+            </form>
+        </section>
+
+        <section class="totals">
+            <h2>ยอดรวม</h2>
+            <p id="total-income">รายรับรวม: ฿0.00</p>
+            <p id="total-expense">รายจ่ายรวม: ฿0.00</p>
+            <p id="balance">ยอดคงเหลือ: ฿0.00</p>
+        </section>
+
+        <section class="records">
+            <h2>ประวัติรายการ</h2>
+            <table id="record-table">
+                <thead>
+                    <tr>
+                        <th>หมวดหมู่</th>
+                        <th>จำนวนเงิน</th>
+                        <th>วันที่</th>
+                        <th>ประเภท</th>
+                        <th>การดำเนินการ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- รายการจะถูกเพิ่มที่นี่ -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
